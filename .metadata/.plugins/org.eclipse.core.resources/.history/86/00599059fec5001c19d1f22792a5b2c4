@@ -1,0 +1,15 @@
+package com.e_commerce.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.e_commerce.repository.CustomerRepository;
+
+@Service
+public class CheckOutService {
+	
+	@Autowired
+	private CustomerRepository customerRepo;
+	
+	
+}

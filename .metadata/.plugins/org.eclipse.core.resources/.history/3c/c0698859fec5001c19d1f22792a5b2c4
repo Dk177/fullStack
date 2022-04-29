@@ -1,0 +1,17 @@
+package com.e_commerce.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.e_commerce.entity.Customer;
+import com.e_commerce.repository.CustomerRepository;
+
+public class CheckOutService {
+	
+	@Autowired
+	private CustomerRepository customerRepo;
+	
+	public Customer saveCustomer(Customer customer) {
+		return customerRepo.save(customer);
+	}
+
+}

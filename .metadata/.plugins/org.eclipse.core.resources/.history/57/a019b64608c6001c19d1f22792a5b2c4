@@ -1,0 +1,87 @@
+package com.e_commerce.entity;
+
+import java.math.BigDecimal;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="order_item")
+public class OrderItem {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "sequence")
+	@SequenceGenerator(name = "sequence",initialValue = 40001,allocationSize = 1)
+	private Long id;
+	
+	private String imageUrl;
+	
+	private int quantity;
+	
+	private BigDecimal unitPrice;
+	
+	private Long productId;
+	
+	@ManyToOne
+	@JoinColumn(name = "order_id")
+	private Order order;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public BigDecimal getUnitPrice() {
+		return unitPrice;
+	}
+
+	public void setUnitPrice(BigDecimal unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+
+	public Long getProductId() {
+		return productId;
+	}
+
+	public void setProductId(Long productId) {
+		this.productId = productId;
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+
+	
+	
+	
+	
+}

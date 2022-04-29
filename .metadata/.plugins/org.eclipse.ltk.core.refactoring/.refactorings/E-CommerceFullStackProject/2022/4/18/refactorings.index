@@ -1,0 +1,6 @@
+1651042284778	Rename field 'zip'
+1651045675712	Rename type 'CheckOutService'
+1651046909548	Move compilation unit
+1651046914381	Delete element
+1651062984132	Encapsulate field 'totalQty'
+1651063004531	Encapsulate field 'qty'
